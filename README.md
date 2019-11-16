@@ -11,10 +11,12 @@
  
  უნდა დაწერო 4 ფუნქცია ფაილში "convolve_babee.c" (maxpool_2d, convolution_2d, maxpool_3d, convolution_3d).
  ფუნქციები უნდა სრულებდნენ convolution და maxpool ოპერაციებს ტენსორებზე  (2d array-matrix, 3d-array-3dtensor).
-  link ები დასახმარებლად (
-   convolution - https://www.youtube.com/watch?time_continue=16&v=43pm7yh-NYQ&feature=emb_logo
-   maxpool - https://www.youtube.com/watch?v=8oOgPUO-TBY
-   ) 
+  
+ link ები დასახმარებლად (
+     convolution - https://www.youtube.com/watch?time_continue=16&v=43pm7yh-NYQ&feature=emb_logo
+     maxpool - https://www.youtube.com/watch?v=8oOgPUO-TBY
+     ) 
+ 
  tensor - ჩვენთვის არის ნებისმიერი N განზომილებიანი მასივი.
  
  convolution - არის ოპერაცია (ავღნიშნოთ @) ტენსორებზე A@b=c სადაც c-ს თითოეული ელემენტი შედგება A-ს ქვემატრიცზე(B-ს განზომილების) B მატრიცის ელემენტ-ელემენტ გადამრავლებით და მიღებულის აჯამვით (ქვემოთ მაგალითია :)).
@@ -36,7 +38,7 @@
                  9, 6]]
   სამ განზომილებაზე იგივეა განზოგადებული. დიდ A კუბში დავთვლით მთლიან შიგა კუბებიში მაქსიმალურებს.
   ## 2d ზე maxpool 
-   დიდი მარჯვენა მატრიცა არის A (განზომილებებით 5 და 5). და ნელნელა მარცხენას ვაშენებთ პასუხს. ნაბიჯის ზომა ამ გიფშიც არის ერთი. და ფანჯრის ზომა რასაც ვატარებთ A ზე არის 3 და 2
+   დიდი მარჯვენა მატრიცა არის A (განზომილებებით 5 და 5). და ნელნელა მარცხენას ვაშენებთ პასუხს. ნაბიჯის ზომა ამ გიფშიც არის ერთი. და ფანჯრის ზომა რასაც ვატარებთ A ზე არის 3 და 3
     ![Image description](https://miro.medium.com/max/936/1*Fw-ehcNBR9byHtho-Rxbtw.gif)
       
     convolution იგივე A მატრიცზე B მატრიცით [1, -1, 0], იქნება C მატრიცა [[a,
@@ -48,11 +50,14 @@
     convolution სამ განზომილებაზე იგივეა განზოგადებული :) 
   
   ## 2d ზე convolution 
+  ლურჯი არის A მატრიცა / ტენზორი
+  
   მონაცრისფრო მატრიცა რაც ლურჯზე ტარდება არის B (რომ აწერია ქვედა მარჯვენა კუთხეებში ეგაა ელემენტები)
-        თუ ვერ ხედავთ B = [[0,1,2], [2,2,0], [0,1,2]]
-  ლურჯი არის A მატრიცა / ტენზორი  
+        თუ ვერ ხედავთ B = [[0,1,2], [2,2,0], [0,1,2]]  
+  
   მწვანე (მარჯვენა) არის C
-    ![Image description](https://miro.medium.com/max/428/1*Zx-ZMLKab7VOCQTxdZ1OAw.gif)
+    
+  ![Image description](https://miro.medium.com/max/428/1*Zx-ZMLKab7VOCQTxdZ1OAw.gif)
     
   ## ეს 3 D ზე convolution
    ![Image description](https://miro.medium.com/max/1288/1*wUVVgZnzBwYKgQyTBK_5sg.png)
