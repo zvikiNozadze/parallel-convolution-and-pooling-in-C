@@ -1,10 +1,19 @@
 # parallel-convolution-and-pooling-in-C
- ##### ტესტებზე გასაშვებად "gcc convolve_tests.c" და მერე ./a.out, memory test-ზე "valgrind --leak-check=yes ./a.out"
- ##### struct ები აღწერილია "convolve_babee.h" ში
+ ###### ტესტებზე გასაშვებად "gcc convolve_tests.c" და მერე ./a.out, memory test-ზე "valgrind --leak-check=yes ./a.out"
+ ###### struct ები აღწერილია "convolve_babee.h" ში
+ 
+ ##### ამოცანა 1: maxpool_2d, convolution_2d -ს დაწერა
+ 
+ ##### ამოცანა 2: maxpool_3d, convolution_3d - ს დაწერა
+ 
+ ##### ამოცანა 3: maxpool_3d, convolution_3d - ის გაპარალელურება multythread რომ იყოს 3D ტენსორი რეალურად 2 D ტენსოების მასივია და დაწერე ისე რო 3D ტენზორში შემავალ, ყველა 2D ტენზორს ცალცალკე ითვლიდნენ thread ები და მერე, იმერჯებოდეს პასუხები. memory ს გამოყენება   ამ კურსში გვკიდია (reference :D )
  
  უნდა დაწერო 4 ფუნქცია ფაილში "convolve_babee.c" (maxpool_2d, convolution_2d, maxpool_3d, convolution_3d).
  ფუნქციები უნდა სრულებდნენ convolution და maxpool ოპერაციებს ტენსორებზე  (2d array-matrix, 3d-array-3dtensor).
- 
+  link ები დასახმარებლად (
+   convolution - https://www.youtube.com/watch?time_continue=16&v=43pm7yh-NYQ&feature=emb_logo
+   maxpool - https://www.youtube.com/watch?v=8oOgPUO-TBY
+   ) 
  tensor - ჩვენთვის არის ნებისმიერი N განზომილებიანი მასივი.
  
  convolution - არის ოპერაცია (ავღნიშნოთ @) ტენსორებზე A@b=c სადაც c-ს თითოეული ელემენტი შედგება A-ს ქვემატრიცზე(B-ს განზომილების) B მატრიცის ელემენტ-ელემენტ გადამრავლებით და მიღებულის აჯამვით (ქვემოთ მაგალითია :)).
