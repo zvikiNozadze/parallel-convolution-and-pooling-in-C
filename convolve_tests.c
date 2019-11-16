@@ -2,13 +2,13 @@
 
 bool test_dims_no_operation_conv_2d() {
   tensor_2d * tensor = new_2d_rand_tensor(5, 5);
-  tensor_2d * conv_tensor = new_2d_value_tensor(1, 1, 1);
-  tensor_2d * conv_output = convolution_2d(tensor, conv_tensor);
+  tensor_2d * filter = new_2d_value_tensor(1, 1, 1);
+  tensor_2d * conv_output = convolution_2d(tensor, filter);
 
   bool is_correct = equals_2d(conv_output, tensor);
 
   free_2d_tensor(tensor);
-  free_2d_tensor(conv_tensor);
+  free_2d_tensor(filter);
   free_2d_tensor(conv_output);
 
   return is_correct;
@@ -16,14 +16,14 @@ bool test_dims_no_operation_conv_2d() {
 
 bool test_operation_conv_2d() {
   tensor_2d * tensor = new_2d_value_tensor(5, 5, 1);
-  tensor_2d * conv_tensor = new_2d_value_tensor(2, 2, 1);
+  tensor_2d * filter = new_2d_value_tensor(2, 2, 1);
   tensor_2d * correct_output = new_2d_value_tensor(4, 4, 4);
-  tensor_2d * conv_output = convolution_2d(tensor, conv_tensor);
+  tensor_2d * conv_output = convolution_2d(tensor, filter);
 
   bool is_correct = equals_2d(conv_output, correct_output);
 
   free_2d_tensor(tensor);
-  free_2d_tensor(conv_tensor);
+  free_2d_tensor(filter);
   free_2d_tensor(correct_output);
   free_2d_tensor(conv_output);
 
@@ -32,14 +32,14 @@ bool test_operation_conv_2d() {
 
 bool test_nonsquare_conv_2d() {
   tensor_2d * tensor = new_2d_value_tensor(10, 5, 3);
-  tensor_2d * conv_tensor = new_2d_value_tensor(3, 4, 2);
+  tensor_2d * filter = new_2d_value_tensor(3, 4, 2);
   tensor_2d * correct_output = new_2d_value_tensor(8, 2, 3*4*6);
-  tensor_2d * conv_output = convolution_2d(tensor, conv_tensor);
+  tensor_2d * conv_output = convolution_2d(tensor, filter);
 
   bool is_correct = equals_2d(conv_output, correct_output);
 
   free_2d_tensor(tensor);
-  free_2d_tensor(conv_tensor);
+  free_2d_tensor(filter);
   free_2d_tensor(correct_output);
   free_2d_tensor(conv_output);
 
@@ -48,14 +48,14 @@ bool test_nonsquare_conv_2d() {
 
 bool test_edge_dims_negs_conv_2d() {
   tensor_2d * tensor = new_2d_value_tensor(19, 2, 13);
-  tensor_2d * conv_tensor = new_2d_value_tensor(1, 2, -2);
+  tensor_2d * filter = new_2d_value_tensor(1, 2, -2);
   tensor_2d * correct_output = new_2d_value_tensor(19, 1, -52);
-  tensor_2d * conv_output = convolution_2d(tensor, conv_tensor);
+  tensor_2d * conv_output = convolution_2d(tensor, filter);
 
   bool is_correct = equals_2d(conv_output, correct_output);
 
   free_2d_tensor(tensor);
-  free_2d_tensor(conv_tensor);
+  free_2d_tensor(filter);
   free_2d_tensor(correct_output);
   free_2d_tensor(conv_output);
 
@@ -122,13 +122,13 @@ bool test_nonsquare_computational_maxpool_2d() {
 
 bool test_dims_simple_conv_3d() {
   tensor_3d * tensor = new_3d_incremental_tensor(4, 4, 4);
-  tensor_3d * conv_tensor = new_3d_value_tensor(1, 1, 1, 1);
-  tensor_3d * conv_output = convolution_3d(tensor, conv_tensor);
+  tensor_3d * filter = new_3d_value_tensor(1, 1, 1, 1);
+  tensor_3d * conv_output = convolution_3d(tensor, filter);
 
   bool is_correct = equals_3d(conv_output, tensor);
 
   free_3d_tensor(tensor);
-  free_3d_tensor(conv_tensor);
+  free_3d_tensor(filter);
   free_3d_tensor(conv_output);
 
   return is_correct;
@@ -136,14 +136,14 @@ bool test_dims_simple_conv_3d() {
 
 bool test_cubic_conv_3d() {
   tensor_3d * tensor = new_3d_value_tensor(40, 40, 40, 3);
-  tensor_3d * conv_tensor = new_3d_value_tensor(2, 2, 2, -2);
+  tensor_3d * filter = new_3d_value_tensor(2, 2, 2, -2);
   tensor_3d * correct_output = new_3d_value_tensor(49, 49, 49, -48);
-  tensor_3d * conv_output = convolution_3d(tensor, conv_tensor);
+  tensor_3d * conv_output = convolution_3d(tensor, filter);
 
   bool is_correct = equals_3d(conv_output, correct_output);
 
   free_3d_tensor(tensor);
-  free_3d_tensor(conv_tensor);
+  free_3d_tensor(filter);
   free_3d_tensor(correct_output);
   free_3d_tensor(conv_output);
 
@@ -152,14 +152,14 @@ bool test_cubic_conv_3d() {
 
 bool test_noncubuc_conv_3d() {
   tensor_3d * tensor = new_3d_value_tensor(40, 30, 20, 10);
-  tensor_3d * conv_tensor = new_3d_value_tensor(2, 3, 4, 5);
+  tensor_3d * filter = new_3d_value_tensor(2, 3, 4, 5);
   tensor_3d * correct_output = new_3d_value_tensor(39, 28, 17, 10*2*3*4*5);
-  tensor_3d * conv_output = convolution_3d(tensor, conv_tensor);
+  tensor_3d * conv_output = convolution_3d(tensor, filter);
 
   bool is_correct = equals_3d(conv_output, correct_output);
 
   free_3d_tensor(tensor);
-  free_3d_tensor(conv_tensor);
+  free_3d_tensor(filter);
   free_3d_tensor(correct_output);
   free_3d_tensor(conv_output);
 

@@ -9,7 +9,7 @@ tensor_3d * maxpool_3d(tensor_3d * tensor, maxpool_dims_3d * dims) {
   return new_3d_value_tensor(1,1,1,1);
 }
 
-tensor_3d * convolution_3d(tensor_3d * tensor, tensor_3d * convolution_tensor) {
+tensor_3d * convolution_3d(tensor_3d * tensor, tensor_3d * filter) {
   return new_3d_value_tensor(1,1,1,1);;
 }
 
@@ -17,6 +17,6 @@ tensor_2d * maxpool_2d(tensor_2d * tensor,  maxpool_dims_2d * dims) {
   return new_2d_value_tensor(1,1,1);;
 }
 
-tensor_2d * convolution_2d(tensor_2d * tensor, tensor_2d * convolution_tensor) {
+tensor_2d * convolution_2d(tensor_2d * tensor, tensor_2d * filter) {
   return new_2d_value_tensor(1,1,1);;
 }
