@@ -12,12 +12,13 @@
  უნდა დაწერო 4 ფუნქცია ფაილში "convolve_babee.c" (maxpool_2d, convolution_2d, maxpool_3d, convolution_3d).
  ფუნქციები უნდა სრულებდნენ convolution და maxpool ოპერაციებს ტენსორებზე  (2d array-matrix, 3d-array-3dtensor).
   
- link ები დასახმარებლად (
-     convolution - https://www.youtube.com/watch?time_continue=16&v=43pm7yh-NYQ&feature=emb_logo
-     maxpool - https://www.youtube.com/watch?v=8oOgPUO-TBY
-     ) 
+    link ები დასახმარებლად (
+      tensor      - https://en.wikipedia.org/wiki/Tensor
+      convolution - https://www.youtube.com/watch?time_continue=16&v=43pm7yh-NYQ&feature=emb_logo
+      maxpool     - https://www.youtube.com/watch?v=8oOgPUO-TBY
+    ) 
  
- tensor - ჩვენთვის არის ნებისმიერი N განზომილებიანი მასივი. (1 განზომილებიანია- მასივი, 2-იანი - მატრიცა, სამიანი კუბის პონტში 3 განზომილებიანი მსაივი. N იანი არის ნებისმიერ განზომილებიანი. ჩამოთვლილნი არიან tensor ის კონკრეტული შემთხვევები. ფიზიკური განმარტება სხვაა მარა CS -ში ესეა მოსული)  https://en.wikipedia.org/wiki/Tensor
+ tensor - ჩვენთვის არის ნებისმიერი N განზომილებიანი მასივი. (1 განზომილებიანია- მასივი, 2-იანი - მატრიცა, სამიანი კუბის პონტში 3 განზომილებიანი მსაივი. N იანი არის ნებისმიერ განზომილებიანი. ჩამოთვლილნი არიან tensor ის კონკრეტული შემთხვევები. ფიზიკური განმარტება სხვაა მარა CS -ში ესეა მოსული) 
  
  convolution - არის ოპერაცია (ავღნიშნოთ @) ტენსორებზე A@b=c სადაც c-ს თითოეული ელემენტი შედგება A-ს ქვემატრიცზე(B-ს განზომილების) B მატრიცის ელემენტ-ელემენტ გადამრავლებით და მიღებულის აჯამვით (ქვემოთ მაგალითია :)).
  
