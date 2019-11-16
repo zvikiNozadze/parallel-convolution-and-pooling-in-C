@@ -18,7 +18,7 @@
       maxpool     - https://www.youtube.com/watch?v=8oOgPUO-TBY
     ) 
  
- tensor - ჩვენთვის არის ნებისმიერი N განზომილებიანი მასივი. 
+ tensor - ჩვენთვის არის ნებისმიერი N განზომილებიანი მასივი.\
                   Scalar is a single number.\
                   Vector is an array of numbers.\
                   Matrix is a 2-D array of numbers.\
