@@ -1,5 +1,4 @@
 #include "convolve_babee.c"
-#include "convolve_tests_helpers.c"
 
 bool test_dims_no_operation_conv_2d() {
   tensor_2d * tensor = new_2d_rand_tensor(5, 5);
@@ -10,7 +9,7 @@ bool test_dims_no_operation_conv_2d() {
 
   free_2d_tensor(tensor);
   free_2d_tensor(conv_tensor);
-  // free_2d_tensor(conv_output);
+  free_2d_tensor(conv_output);
 
   return is_correct;
 }
@@ -26,7 +25,7 @@ bool test_operation_conv_2d() {
   free_2d_tensor(tensor);
   free_2d_tensor(conv_tensor);
   free_2d_tensor(correct_output);
-  // free_2d_tensor(conv_output);
+  free_2d_tensor(conv_output);
 
   return is_correct;
 }
@@ -42,7 +41,7 @@ bool test_nonsquare_conv_2d() {
   free_2d_tensor(tensor);
   free_2d_tensor(conv_tensor);
   free_2d_tensor(correct_output);
-  // free_2d_tensor(conv_output);
+  free_2d_tensor(conv_output);
 
   return is_correct;
 }
@@ -58,7 +57,7 @@ bool test_edge_dims_negs_conv_2d() {
   free_2d_tensor(tensor);
   free_2d_tensor(conv_tensor);
   free_2d_tensor(correct_output);
-  // free_2d_tensor(conv_output);
+  free_2d_tensor(conv_output);
 
   return is_correct;
 }
@@ -72,7 +71,7 @@ bool test_dims_no_stride_maxpool_2d() {
   bool is_correct = equals_2d(maxpool_output, tensor);
 
   free_2d_tensor(tensor);
-  // free_2d_tensor(maxpool_output);
+  free_2d_tensor(maxpool_output);
   free(dims);
   return is_correct;
 }
@@ -88,7 +87,7 @@ bool test_dims_stride_maxpool_2d() {
 
   free_2d_tensor(tensor);
   free_2d_tensor(correct_output);
-  // free_2d_tensor(maxpool_output);
+  free_2d_tensor(maxpool_output);
   free(dims);
   return is_correct;
 }
@@ -116,7 +115,7 @@ bool test_nonsquare_computational_maxpool_2d() {
 
   free_2d_tensor(tensor);
   free_2d_tensor(correct_output);
-  // free_2d_tensor(maxpool_output);
+  free_2d_tensor(maxpool_output);
   free(dims);
   return is_correct;
 }
@@ -130,7 +129,7 @@ bool test_dims_simple_conv_3d() {
 
   free_3d_tensor(tensor);
   free_3d_tensor(conv_tensor);
-  // free_3d_tensor(conv_output);
+  free_3d_tensor(conv_output);
 
   return is_correct;
 }
@@ -146,7 +145,7 @@ bool test_cubic_conv_3d() {
   free_3d_tensor(tensor);
   free_3d_tensor(conv_tensor);
   free_3d_tensor(correct_output);
-  // free_3d_tensor(conv_output);
+  free_3d_tensor(conv_output);
 
   return is_correct;
 }
@@ -162,7 +161,7 @@ bool test_noncubuc_conv_3d() {
   free_3d_tensor(tensor);
   free_3d_tensor(conv_tensor);
   free_3d_tensor(correct_output);
-  // free_3d_tensor(conv_output);
+  free_3d_tensor(conv_output);
 
   return is_correct;
 }
@@ -178,7 +177,7 @@ bool test_dims_simple_stride_maxpool_3d() {
 
   free_3d_tensor(tensor);
   free_3d_tensor(correct_output);
-  // free_3d_tensor(maxpool_output);
+  free_3d_tensor(maxpool_output);
   free(dims);
   return is_correct;
 }
@@ -215,7 +214,7 @@ bool test_noncubuc_stride_maxpool_3d() {
 
   free_3d_tensor(tensor);
   free_3d_tensor(correct_output);
-  // free_3d_tensor(maxpool_output);
+  free_3d_tensor(maxpool_output);
   free(dims);
   return is_correct;
 }
