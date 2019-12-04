@@ -1,5 +1,4 @@
 # parallel-convolution-and-pooling-in-C
- ### თუ სადმე შეცდომაა გამაგებინე და გამოვასწორებ. აქ მომწერე (https://www.facebook.com/zviadi.nozadze)
  ###### ტესტებზე გასაშვებად "gcc convolve_tests.c" და მერე ./a.out, memory test-ზე "valgrind --leak-check=yes ./a.out"
  ###### struct ები აღწერილია "convolve_babee.h" ში
  
